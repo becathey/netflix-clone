@@ -15,7 +15,9 @@ function Banner() {
         }
         fetchData()
     }, [])
-    console.log(movie)
+    function truncate(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + "..." : str
+    }
 
     return (
         <header 
@@ -37,7 +39,7 @@ function Banner() {
                     <button className='banner__button'>My List</button>
                 </div>
                 <h1 className='banner__description'>
-                    {movie?.overview}    
+                    {truncate(movie?.overview, 150)}    
                 </h1>
             </div>    
         </header>
