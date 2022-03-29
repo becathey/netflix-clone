@@ -1,11 +1,12 @@
 import requests from './requests'
+import Banner from './Banner';
 import Row from './Row';
 import './App.css';
 
 function App() {
   return (
     <div className="app">
-      <h1>Hello World!</h1>
+      <Banner />
       <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
