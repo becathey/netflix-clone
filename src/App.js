@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="app">
+    <div className="App">
       <Banner />
       <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
